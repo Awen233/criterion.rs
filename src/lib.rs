@@ -883,8 +883,8 @@ https://bheisler.github.io/criterion.rs/book/faq.html
             }
         }
 
-        let bench = matches.is_present("bench");
-        let test = matches.is_present("test");
+        let bench = true;
+        let test = false;
         let test_mode = match (bench, test) {
             (true, true) => true,   // cargo bench -- --test should run tests
             (true, false) => false, // cargo bench should run benchmarks
